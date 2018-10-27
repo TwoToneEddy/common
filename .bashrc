@@ -166,5 +166,7 @@ export PS1="$ps1_green@\h:$ps1_white\W\[\$(parse_git_branch_color)\]\$(parse_git
 alias inav='cd /home/lee/Development/inav'
 alias g='gedit'
 alias pi='ssh pi@raspberrypi'
+alias dt='ssh lee@192.168.0.16'
+alias lt='ssh lee@192.168.0.5'
 alias bf='cd /home/lee/Development/betaflight'
 alias gs='git status -s'
