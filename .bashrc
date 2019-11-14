@@ -162,12 +162,6 @@ parse_git_branch_color() {
 
 # With color:
 export PS1="$ps1_green@\h:$ps1_white\W\[\$(parse_git_branch_color)\]\$(parse_git_branch) $ps1_blue\$$ps1_white "
-
-alias inav='cd /home/lee/Development/inav'
-alias g='gedit'
-alias pi='ssh pi@raspberrypi'
-alias dt='ssh lee@192.168.0.16'
-alias lt='ssh lee@192.168.0.5'
-alias bf='cd /home/lee/Development/betaflight'
+export PATH=$PATH:/home/pi/arduino-1.8.10
 alias gs='git status -s'
 alias gk='gitk --all &'
