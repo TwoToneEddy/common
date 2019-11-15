@@ -171,3 +171,5 @@ alias lt='ssh lee@192.168.0.5'
 alias bf='cd /home/lee/Development/betaflight'
 alias gs='git status -s'
 alias gk='gitk --all &'
+alias cf="sudo socat PTY,link=$H/dev/ttyACM0,raw,echo=0  EXEC:'ssh pi@octopi.local socat - /dev/ttyUSB0'"
+alias mm='platformio run -e sanguino_atmega1284p'
