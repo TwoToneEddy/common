@@ -173,3 +173,4 @@ alias gs='git status -s'
 alias gk='gitk --all &'
 alias cf="sudo socat PTY,link=$H/dev/ttyACM0,raw,echo=0  EXEC:'ssh pi@octopi.local socat - /dev/ttyUSB0'"
 alias mm='platformio run -e sanguino_atmega1284p'
+alias com='sudo chmod 777 /dev/ttyACM0'
