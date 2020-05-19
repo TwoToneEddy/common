@@ -162,6 +162,7 @@ parse_git_branch_color() {
 
 # With color:
 export PS1="$ps1_green@\h:$ps1_white\W\[\$(parse_git_branch_color)\]\$(parse_git_branch) $ps1_blue\$$ps1_white "
+export GH="https://github.com/LeeHudsonDLS/"
 
 alias inav='cd /home/lee/Development/inav'
 alias g='gedit'
@@ -174,3 +175,11 @@ alias gk='gitk --all &'
 alias cf="sudo socat PTY,link=$H/dev/ttyACM0,raw,echo=0  EXEC:'ssh pi@octopi.local socat - /dev/ttyUSB0'"
 alias mm='platformio run -e sanguino_atmega1284p'
 alias com='sudo chmod 777 /dev/ttyACM0'
+alias w='cd ~/work'
+alias work='ssh -A -X jjc62351@ssh.diamond.ac.uk'
+alias socks='ssh -N -D9090 jjc62351@ssh.diamond.ac.uk'
+alias vpn='sshuttle --dns --pidfile=/tmp/sshuttle.pid -HDr jjc62351@ssh.diamond.ac.uk 172.23.0.0/16 193.62.221.72/32'
+alias vpnk='kill $(cat /tmp/sshuttle.pid)'
+alias guitar='pactl load-module module-loopback latency_msec=1'
+alias guitaro='pactl unload-module module-loopback'
+
