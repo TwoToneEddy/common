@@ -15,6 +15,13 @@ sudo apt install python-pip
 pip install -U platformio
 git clone git@github.com:TwoToneEddy/TH3D-Unified-U1.R2.git
 git clone git@github.com:TwoToneEddy/quadSettings.git
+cd ~/
+
+mkdir work
+cd work
+git clone https://github.com/LeeHudsonDLS/FE10B.git
+git clone https://github.com/LeeHudsonDLS/FE10B-CS-IOC-01.git
+
 sudo dpkg -i ~/Downloads/google-chrome-stable_current_amd64.deb
 sudo sh ~/Downloads/VMware-Player-15.5.1-15018445.x86_64.bundle
 sudo dpkg -i ~/Downloads/betaflight-configurator_10.6.0_amd64.deb
