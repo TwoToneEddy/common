@@ -1,0 +1,9 @@
+https://askubuntu.com/questions/1177248/nvidia-gtx-1650-not-detected-in-ubuntu-18-04-3
+sudo mv xorg.conf.d/ /etc/X11/
+
+
+nvidia commands:
+
+nvidia-smi      This shows what's going through the GPU and temps
+glxinfo|egrep "OpenGL vendor|OpenGL renderer"   This shows which GPU is in use
+inxi -Gx    Shows which graphics driver you're using
