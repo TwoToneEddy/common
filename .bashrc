@@ -176,7 +176,7 @@ alias cf="sudo socat PTY,link=$H/dev/ttyACM0,raw,echo=0  EXEC:'ssh pi@octopi.loc
 alias mm='platformio run -e sanguino_atmega1284p'
 alias com='sudo chmod 777 /dev/ttyACM0'
 alias w='cd ~/work'
-alias work='ssh -A -X jjc62351@ssh.diamond.ac.uk'
+alias work='ssh -C -A -X jjc62351@ssh.diamond.ac.uk'
 alias socks='ssh -N -D9090 jjc62351@ssh.diamond.ac.uk'
 alias vpn='sshuttle --dns --pidfile=/tmp/sshuttle.pid -HDr jjc62351@ssh.diamond.ac.uk 172.23.0.0/16 193.62.221.72/32'
 alias vpnk='kill $(cat /tmp/sshuttle.pid)'
