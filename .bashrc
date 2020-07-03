@@ -182,4 +182,7 @@ alias vpn='sshuttle --dns --pidfile=/tmp/sshuttle.pid -HDr jjc62351@ssh.diamond.
 alias vpnk='kill $(cat /tmp/sshuttle.pid)'
 alias guitar='pactl load-module module-loopback latency_msec=1'
 alias guitaro='pactl unload-module module-loopback'
+alias gpu='glxinfo|egrep "OpenGL vendor|OpenGL renderer"'
+alias gpud='inxi -Gx'
+alias nvid='nvidia-smi'
 
