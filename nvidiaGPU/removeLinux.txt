@@ -1,0 +1,12 @@
+Remove from the EFI first:
+	Run powershell as admin
+	"diskpart"
+	"list disk" "sel disk 0" "list vol" "sel vol x" where x is system vol
+	"assign letter=Z:"
+	"exit"
+	"Z:"
+	"cd EFI"
+	"rmdir ubuntu"
+Remove partition in disk partition tool windows
+Expand main partition
+	
