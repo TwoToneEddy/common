@@ -1,0 +1,7 @@
+First pass
+FurMark
+Score: 7360 points (FPS:122)
+Settings:
+	1024x640 windowed
+	alias off
+	duration 6000ms	
