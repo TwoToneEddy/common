@@ -1,0 +1,3 @@
+Add this to ~/.vmware/preferences
+
+mks.gl.allowBlacklistedDrivers = "TRUE"
