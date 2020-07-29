@@ -185,4 +185,7 @@ alias guitaro='pactl unload-module module-loopback'
 alias gpu='glxinfo|egrep "OpenGL vendor|OpenGL renderer"'
 alias gpud='inxi -Gx'
 alias nvid='nvidia-smi'
+alias windows='sudo /opt/reboot-into-windows'
+alias usbw='grep . /sys/bus/usb/devices/*/power/wakeup'
+alias workfs='sshfs -o reconnect jjc62351@ssh.diamond.ac.uk:/dls_sw /dls_sw'
 
