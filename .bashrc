@@ -157,35 +157,54 @@ parse_git_branch_color() {
     fi
 }
 
+shopt | grep -q '^direxpand\b'&& shopt -s direxpand
+shopt -s nocasematch
 # No color:
 #export PS1="@\h:\W\$(parse_git_branch) \$ "
 
 # With color:
 export PS1="$ps1_green@\h:$ps1_white\W\[\$(parse_git_branch_color)\]\$(parse_git_branch) $ps1_blue\$$ps1_white "
 export GH="https://github.com/LeeHudsonDLS/"
-
-alias inav='cd /home/lee/Development/inav'
+export PATH="/home/lee/.local/bin:$PATH"
 alias g='gedit'
 alias pi='ssh pi@raspberrypi'
-alias dt='ssh lee@192.168.0.16'
-alias lt='ssh lee@192.168.0.5'
-alias bf='cd /home/lee/Development/betaflight'
-alias gs='git status -s'
-alias gk='gitk --all &'
 alias cf="sudo socat PTY,link=$H/dev/ttyACM0,raw,echo=0  EXEC:'ssh pi@octopi.local socat - /dev/ttyUSB0'"
 alias mm='platformio run -e sanguino_atmega1284p'
 alias com='sudo chmod 777 /dev/ttyACM0'
-alias w='cd ~/work'
-alias work='ssh -C -A -X jjc62351@ssh.diamond.ac.uk'
-alias socks='ssh -N -D9090 jjc62351@ssh.diamond.ac.uk'
-alias vpn='sshuttle --dns --pidfile=/tmp/sshuttle.pid -HDr jjc62351@ssh.diamond.ac.uk 172.23.0.0/16 193.62.221.72/32'
-alias vpnk='kill $(cat /tmp/sshuttle.pid)'
-alias guitar='pactl load-module module-loopback latency_msec=1'
-alias guitaro='pactl unload-module module-loopback'
+alias windows='sudo /opt/reboot-into-windows'
+alias usbw='grep . /sys/bus/usb/devices/*/power/wakeup'
+alias reload='source ~/.bashrc'
+
+# GPU
 alias gpu='glxinfo|egrep "OpenGL vendor|OpenGL renderer"'
 alias gpud='inxi -Gx'
 alias nvid='nvidia-smi'
-alias windows='sudo /opt/reboot-into-windows'
-alias usbw='grep . /sys/bus/usb/devices/*/power/wakeup'
-alias workfs='sshfs -o reconnect jjc62351@ssh.diamond.ac.uk:/dls_sw /dls_sw'
 
+
+
+# Git
+alias gs='git status -s'
+alias gk='gitk --all &'
+alias gr='git remote -v'
+alias prune='git fetch --all --tags --prune'
+
+# Work ssh
+alias workssh='ssh -C -A -X jjc62351@ssh.diamond.ac.uk'
+alias workfs6='sshfs -o reconnect jjc62351@ssh.diamond.ac.uk:/dls_sw/work/R3.14.12.3 /dls_sw/work/R3.14.12.3'
+alias workfs7='sshfs -o reconnect jjc62351@ssh.diamond.ac.uk:/dls_sw/work/R3.14.12.7 /dls_sw/work/R3.14.12.7'
+
+# VPN
+alias socks='ssh -N -D9090 jjc62351@ssh.diamond.ac.uk'
+alias vpn='sshuttle --dns --pidfile=/tmp/sshuttle.pid -HDr jjc62351@ssh.diamond.ac.uk 172.23.0.0/16 193.62.221.72/32'
+alias vpnk='kill $(cat /tmp/sshuttle.pid)'
+
+
+# Work Directories
+alias work6='cd /dls_sw/work/R3.14.12.3'
+alias work='cd /dls_sw/work/R3.14.12.7'
+alias prod6='cd /dls_sw/prod/R3.14.12.3'
+alias prod='cd /dls_sw/prod/R3.14.12.7'
+alias w='cd ~/work'
+
+
+source ~/.git-completion1.7.1.bash
