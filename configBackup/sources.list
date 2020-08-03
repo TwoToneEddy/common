@@ -1,1 +1,7 @@
-#deb cdrom:[Linux Mint 19.3 _Tricia_ - Release amd64 20191213]/ bionic contrib main non-free
+#deb cdrom:[Linux Mint 20 Cinnamon 64-bit 20 _Custom Ulyana_ (20200703)]/ focal contrib main
+
+# This system was installed using small removable media
+# (e.g. netinst, live or single CD). The matching "deb cdrom"
+# entries were disabled at the end of the installation process.
+# For information about how to configure apt package sources,
+# see the sources.list(5) manual.
