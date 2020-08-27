@@ -161,7 +161,7 @@ shopt | grep -q '^direxpand\b'&& shopt -s direxpand
 shopt -s nocasematch
 # No color:
 #export PS1="@\h:\W\$(parse_git_branch) \$ "
-
+export PATH=$PATH:~/.platformio/penv/bin
 # With color:
 export PS1="$ps1_green@\h:$ps1_white\W\[\$(parse_git_branch_color)\]\$(parse_git_branch) $ps1_blue\$$ps1_white "
 export GH="https://github.com/LeeHudsonDLS/"
@@ -174,6 +174,7 @@ alias com='sudo chmod 777 /dev/ttyACM0'
 alias windows='sudo /opt/reboot-into-windows'
 alias usbw='grep . /sys/bus/usb/devices/*/power/wakeup'
 alias reload='source ~/.bashrc'
+alias b='/home/lee/common/scripts/commit.sh'
 
 # GPU
 alias gpu='glxinfo|egrep "OpenGL vendor|OpenGL renderer"'
