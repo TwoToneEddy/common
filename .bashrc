@@ -193,6 +193,7 @@ alias prune='git fetch --all --tags --prune'
 alias workssh='ssh -C -A -X jjc62351@ssh.diamond.ac.uk'
 alias workfs6='sshfs -o reconnect jjc62351@ssh.diamond.ac.uk:/dls_sw/work/R3.14.12.3 /dls_sw/work/R3.14.12.3'
 alias workfs7='sshfs -o reconnect jjc62351@ssh.diamond.ac.uk:/dls_sw/work/R3.14.12.7 /dls_sw/work/R3.14.12.7'
+alias workfsHome='sshfs -o reconnect jjc62351@ssh.diamond.ac.uk:/home/jjc62351 ~/workHome'
 
 # VPN
 alias socks='ssh -N -D9090 jjc62351@ssh.diamond.ac.uk'
