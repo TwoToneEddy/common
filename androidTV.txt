@@ -1,0 +1,5 @@
+adb connect 192.168.0.32
+adb shell pm uninstall --user 0 com.google.android.tvlauncher
+
+adb shell cmd package install-existing com.google.android.tvlauncher
+adb shell pm enable com.google.android.tvlauncher

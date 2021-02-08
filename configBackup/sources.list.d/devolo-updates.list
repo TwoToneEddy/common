@@ -1,0 +1,7 @@
+### THIS FILE IS AUTOMATICALLY CONFIGURED ###
+# You may comment out this entry, but any other modifications may be lost.
+# In particular, do not add a comment behind the entry on the same line,
+# because that's what the Ubuntu Upgrade Managaer does when disabling all 
+# third-party repositories and that would cause this entry to be re-enabled.
+# See /etc/cron.daily/devolo-updates for more details.
+deb http://update.devolo.com/linux/apt/ stable main
