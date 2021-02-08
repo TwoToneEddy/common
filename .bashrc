@@ -171,6 +171,12 @@ alias pi='ssh pi@raspberrypi'
 alias cf="sudo socat PTY,link=$H/dev/ttyACM0,raw,echo=0  EXEC:'ssh pi@octopi.local socat - /dev/ttyUSB0'"
 alias mm='platformio run -e sanguino_atmega1284p'
 alias com='sudo chmod 777 /dev/ttyACM0'
+alias com1='sudo chmod 777 /dev/ttyACM1'
+alias com2='sudo chmod 777 /dev/ttyACM2'
+alias com3='sudo chmod 777 /dev/ttyACM3'
+alias com4='sudo chmod 777 /dev/ttyACM4'
+alias com5='sudo chmod 777 /dev/ttyACM5'
+alias ports="ls /dev | grep ttyACM"
 alias windows='sudo /opt/reboot-into-windows'
 alias usbw='grep . /sys/bus/usb/devices/*/power/wakeup'
 alias reload='source ~/.bashrc'
@@ -207,6 +213,9 @@ alias work='cd /dls_sw/work/R3.14.12.7'
 alias prod6='cd /dls_sw/prod/R3.14.12.3'
 alias prod='cd /dls_sw/prod/R3.14.12.7'
 alias w='cd ~/work'
+alias mcu='make clean uninstall'
+alias avr='avrdude -C/usr/share/arduino/hardware/tools/avrdude.conf -v -v -v -v -patmega328p -cstk500v1 -P/dev/ttyACM0 -b19200'
+alias avrf='avrdude -C/usr/share/arduino/hardware/tools/avrdude.conf -v -v -v -v -patmega328p -cstk500v1 -P/dev/ttyACM0 -b19200 -Uflash:w:'
 
 
 source ~/.git-completion1.7.1.bash
