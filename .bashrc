@@ -194,12 +194,15 @@ alias gs='git status -s'
 alias gk='gitk --all &'
 alias gr='git remote -v'
 alias prune='git fetch --all --tags --prune'
+alias tag='git describe --tags $(git rev-list --tags --max-count=1)'
+alias tagl='git describe --tags $(git rev-list --tags --max-count=100)'
 
 # Work ssh
 alias workssh='ssh -C -A -X jjc62351@ssh.diamond.ac.uk'
 alias workfs6='sshfs -o reconnect jjc62351@ssh.diamond.ac.uk:/dls_sw/work/R3.14.12.3 /dls_sw/work/R3.14.12.3'
 alias workfs7='sshfs -o reconnect jjc62351@ssh.diamond.ac.uk:/dls_sw/work/R3.14.12.7 /dls_sw/work/R3.14.12.7'
 alias workfsHome='sshfs -o reconnect jjc62351@ssh.diamond.ac.uk:/home/jjc62351 ~/workHome'
+alias workfsmpc='sshfs -o reconnect jjc62351@ssh.diamond.ac.uk:/dls_sw/work/R3.14.12.7/support/digitelMpc /dls_sw/work/R3.14.12.7/support/digitelMpc'
 
 # VPN
 alias socks='ssh -N -D9090 jjc62351@ssh.diamond.ac.uk'
@@ -216,6 +219,8 @@ alias w='cd ~/work'
 alias mcu='make clean uninstall'
 alias avr='avrdude -C/usr/share/arduino/hardware/tools/avrdude.conf -v -v -v -v -patmega328p -cstk500v1 -P/dev/ttyACM0 -b19200'
 alias avrf='avrdude -C/usr/share/arduino/hardware/tools/avrdude.conf -v -v -v -v -patmega328p -cstk500v1 -P/dev/ttyACM0 -b19200 -Uflash:w:'
-
+alias rmn="rename 's/^\d+ //' *"
+alias state="scp -r root@192.168.0.17:/storage/roms/savestates ."
+alias net="nmap -sP 192.168.0.0/24 | grep report"
 
 source ~/.git-completion1.7.1.bash
