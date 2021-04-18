@@ -192,6 +192,9 @@ alias nvid='nvidia-smi'
 # Git
 alias gs='git status -s'
 alias gk='gitk --all &'
+alias pull='git pull origin master'
+alias push='git push origin master'
+alias add='git add *'
 alias gr='git remote -v'
 alias prune='git fetch --all --tags --prune'
 alias tag='git describe --tags $(git rev-list --tags --max-count=1)'
@@ -215,6 +218,8 @@ alias socks='ssh -N -D9090 jjc62351@ssh.diamond.ac.uk'
 alias vpn='sshuttle --dns --pidfile=/tmp/sshuttle.pid -HDr jjc62351@ssh.diamond.ac.uk 172.23.0.0/16 193.62.221.72/32'
 alias vpnk='kill $(cat /tmp/sshuttle.pid)'
 
+#retropie
+alias ems='grep -nr --include emulators.cfg default /opt/retropie/configs'
 
 # Work Directories
 alias work6='cd /dls_sw/work/R3.14.12.3'
