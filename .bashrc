@@ -197,6 +197,12 @@ alias prune='git fetch --all --tags --prune'
 alias tag='git describe --tags $(git rev-list --tags --max-count=1)'
 alias tagl='git describe --tags $(git rev-list --tags --max-count=100)'
 
+
+alias rpi='ssh pi@retropie'
+alias elec='ssh root@351ELEC'
+alias elec='ssh root@351ELEC'
+alias ark='ssh root@rg351p'
+
 # Work ssh
 alias workssh='ssh -C -A -X jjc62351@ssh.diamond.ac.uk'
 alias workfs6='sshfs -o reconnect jjc62351@ssh.diamond.ac.uk:/dls_sw/work/R3.14.12.3 /dls_sw/work/R3.14.12.3'
