@@ -166,6 +166,7 @@ export PATH=$PATH:~/.platformio/penv/bin
 export PS1="$ps1_green@\h:$ps1_white\W\[\$(parse_git_branch_color)\]\$(parse_git_branch) $ps1_blue\$$ps1_white "
 export GH="https://github.com/LeeHudsonDLS/"
 export PATH="/home/lee/.local/bin:$PATH"
+export PATH="/home/lee/clion-2019.2.5/bin:$PATH"
 alias g='gedit'
 alias pi='ssh pi@raspberrypi'
 alias cf="sudo socat PTY,link=$H/dev/ttyACM0,raw,echo=0  EXEC:'ssh pi@octopi.local socat - /dev/ttyUSB0'"
@@ -221,6 +222,7 @@ alias vpnk='kill $(cat /tmp/sshuttle.pid)'
 
 #retropie
 alias ems='grep -nr --include emulators.cfg default /opt/retropie/configs'
+alias emsl='grep -nr --include emulators.cfg default /home/lee/retropie/retropie/configs'
 
 # Work Directories
 alias work6='cd /dls_sw/work/R3.14.12.3'
@@ -230,7 +232,16 @@ alias prod='cd /dls_sw/prod/R3.14.12.7'
 alias w='cd ~/work'
 alias mcu='make clean uninstall'
 alias avr='avrdude -C/usr/share/arduino/hardware/tools/avrdude.conf -v -v -v -v -patmega328p -cstk500v1 -P/dev/ttyACM0 -b19200'
-alias avrf='avrdude -C/usr/share/arduino/hardware/tools/avrdude.conf -v -v -v -v -patmega328p -cstk500v1 -P/dev/ttyACM0 -b19200 -Uflash:w:'
+alias gps='cd /home/lee/Documents/PlatformIO/Projects'
+
+alias avrrf='avrdude -C/usr/share/arduino/hardware/tools/avrdude.conf -v -v -v -v -patmega328p -cstk500v1 -P/dev/ttyACM0 -b19200 -Ulfuse:r:'
+
+alias avraf='avrdude -C/usr/share/arduino/hardware/tools/avrdude.conf -v -v -v -v -patmega328p -cstk500v1 -P/dev/ttyACM0 -b19200 -Ulfuse:w:0xFF:m'
+alias avrefl='avrdude -C/usr/share/arduino/hardware/tools/avrdude.conf -v -v -v -v -patmega328p -cstk500v1 -P/dev/ttyACM0 -b19200 -Ulfuse:w:0xE2:m'
+alias avrefh='avrdude -C/usr/share/arduino/hardware/tools/avrdude.conf -v -v -v -v -patmega328p -cstk500v1 -P/dev/ttyACM0 -b19200 -Uhfuse:w:0xDE:m'
+alias avrefe='avrdude -C/usr/share/arduino/hardware/tools/avrdude.conf -v -v -v -v -patmega328p -cstk500v1 -P/dev/ttyACM0 -b19200 -Uefuse:w:0xFD:m'
+alias ledF='avrdude -C/usr/share/arduino/hardware/tools/avrdude.conf -v -v -v -v -patmega328p -cstk500v1 -P/dev/ttyACM0 -b19200 -Ulfuse:w:0xE2:m -Uhfuse:w:0xDE:m -Uefuse:w:0xFD:m'
+
 alias rmn="rename 's/^\d+ //' *"
 alias state="scp -r root@192.168.0.17:/storage/roms/savestates ."
 alias net="nmap -sP 192.168.0.0/24 | grep report"
