@@ -167,6 +167,7 @@ export PS1="$ps1_green@\h:$ps1_white\W\[\$(parse_git_branch_color)\]\$(parse_git
 export GH="https://github.com/LeeHudsonDLS/"
 export PATH="/home/lee/.local/bin:$PATH"
 export PATH="/home/lee/clion-2019.2.5/bin:$PATH"
+export PATH="/opt/gephi/bin:$PATH"
 alias g='gedit'
 alias pi='ssh pi@raspberrypi'
 alias cf="sudo socat PTY,link=$H/dev/ttyACM0,raw,echo=0  EXEC:'ssh pi@octopi.local socat - /dev/ttyUSB0'"
@@ -214,6 +215,45 @@ alias workfs6='sshfs -o reconnect jjc62351@ssh.diamond.ac.uk:/dls_sw/work/R3.14.
 alias workfs7='sshfs -o reconnect jjc62351@ssh.diamond.ac.uk:/dls_sw/work/R3.14.12.7 /dls_sw/work/R3.14.12.7'
 alias workfsHome='sshfs -o reconnect jjc62351@ssh.diamond.ac.uk:/home/jjc62351 ~/workHome'
 alias workfsmpc='sshfs -o reconnect jjc62351@ssh.diamond.ac.uk:/dls_sw/work/R3.14.12.7/support/digitelMpc /dls_sw/work/R3.14.12.7/support/digitelMpc'
+alias workfsd2afef='sshfs -o reconnect jjc62351@ssh.diamond.ac.uk:/home/jjc62351/work/d2afe-firmware /home/lee/work/workfs/d2afe-firmware'
+alias workfsd2afefu='fusermount -u /home/lee/work/workfs/d2afe-firmware'
+alias workfsd2afe='sshfs -o reconnect jjc62351@ssh.diamond.ac.uk:/dls_sw/work/R3.14.12.7/support/d2afe /home/lee/work/workfs/d2afe'
+alias workfsd2afeu='fusermount -u /home/lee/work/workfs/d2afe'
+alias workfsdigitelMpc='sshfs -o reconnect jjc62351@ssh.diamond.ac.uk:/dls_sw/work/R3.14.12.7/support/digitelMpc /home/lee/work/workfs/digitelMpc'
+alias workfsdigitelMpcu='fusermount -u /home/lee/work/workfs/digitelMpc'
+alias workfspy='sshfs -o reconnect jjc62351@ssh.diamond.ac.uk:/dls_sw/work/R3.14.12.7/ioc/FE16B/FE16B-PY-IOC-01 /home/lee/work/workfs/FE16B-PY-IOC-01'
+alias workfspyu='fusermount -u /home/lee/work/workfs/FE16B-PY-IOC-01'
+
+
+
+alias workfsfe='sshfs -o reconnect jjc62351@ssh.diamond.ac.uk:/dls_sw/work/R3.14.12.7/support/FE /home/lee/work/workfs/FE'
+alias workfsfeu='fusermount -u /home/lee/work/workfs/FE'
+
+alias workfsmks937a='sshfs -o reconnect jjc62351@ssh.diamond.ac.uk:/dls_sw/work/R3.14.12.7/support/mks937a /home/lee/work/workfs/mks937a'
+alias workfsmks937au='fusermount -u /home/lee/work/workfs/mks937a'
+
+alias workfsmks937b='sshfs -o reconnect jjc62351@ssh.diamond.ac.uk:/dls_sw/work/R3.14.12.7/support/mks937b /home/lee/work/workfs/mks937b'
+alias workfsmks937bu='fusermount -u /home/lee/work/workfs/mks937b'
+
+alias workfsdlsPLC='sshfs -o reconnect jjc62351@ssh.diamond.ac.uk:/dls_sw/work/R3.14.12.7/support/jjc62351/dlsPLC /home/lee/work/workfs/dlsPLC'
+alias workfsdlsPLCu='fusermount -u /home/lee/work/workfs/dlsPLC'
+
+alias workfsWBPcs8000='sshfs -o reconnect jjc62351@ssh.diamond.ac.uk:/dls_sw/work/R3.14.12.7/support/WBPcs8000 /home/lee/work/workfs/WBPcs8000'
+alias workfsWBPcs8000u='fusermount -u /home/lee/work/workfs/WBPcs8000'
+alias workfsgirderDev='sshfs -o reconnect jjc62351@ssh.diamond.ac.uk:/dls_sw/work/R3.14.12.7/support/girderDev /home/lee/work/workfs/girderDev'
+alias workfsgirderDevu='fusermount -u /home/lee/work/workfs/girderDev'
+
+alias workfspmac='sshfs -o reconnect jjc62351@ssh.diamond.ac.uk:/dls_sw/work/R3.14.12.7/support/jjc62351/pmac /home/lee/work/workfs/pmac'
+alias workfspmacu='fusermount -u /home/lee/work/workfs/pmac'
+
+alias workfsid='sshfs -o reconnect jjc62351@ssh.diamond.ac.uk:/home/jjc62351/work/id02j /home/lee/work/workfs/id02j'
+alias workfsidu='fusermount -u /home/lee/work/workfs/id02j'
+
+alias workfsFE16I='sshfs -o reconnect jjc62351@ssh.diamond.ac.uk:/dls_sw/work/R3.14.12.7/ioc/FE16I /home/lee/work/workfs/FE16I'
+alias workfsFE16Iu='fusermount -u /home/lee/work/workfs/FE16I'
+
+alias workfszepto='sshfs -o reconnect jjc62351@ssh.diamond.ac.uk:/dls_sw/work/R3.14.12.7/support/zeptoQuadrupole /home/lee/work/workfs/zeptoQuadrupole'
+alias workfszeptou='fusermount -u /home/lee/work/workfs/zeptoQuadrupole'
 
 # VPN
 alias socks='ssh -N -D9090 jjc62351@ssh.diamond.ac.uk'
@@ -234,16 +274,27 @@ alias mcu='make clean uninstall'
 alias avr='avrdude -C/usr/share/arduino/hardware/tools/avrdude.conf -v -v -v -v -patmega328p -cstk500v1 -P/dev/ttyACM0 -b19200'
 alias gps='cd /home/lee/Documents/PlatformIO/Projects'
 
-alias avrrf='avrdude -C/usr/share/arduino/hardware/tools/avrdude.conf -v -v -v -v -patmega328p -cstk500v1 -P/dev/ttyACM0 -b19200 -Ulfuse:r:'
+alias avrrf='avrdude -C/usr/share/arduino/hardware/tools/avrdude.conf -v -v -v -v -F -patmega328p -cstk500v1 -P/dev/ttyACM0 -b19200 -Ulfuse:r:'
 
 alias avraf='avrdude -C/usr/share/arduino/hardware/tools/avrdude.conf -v -v -v -v -patmega328p -cstk500v1 -P/dev/ttyACM0 -b19200 -Ulfuse:w:0xFF:m'
-alias avrefl='avrdude -C/usr/share/arduino/hardware/tools/avrdude.conf -v -v -v -v -patmega328p -cstk500v1 -P/dev/ttyACM0 -b19200 -Ulfuse:w:0xE2:m'
-alias avrefh='avrdude -C/usr/share/arduino/hardware/tools/avrdude.conf -v -v -v -v -patmega328p -cstk500v1 -P/dev/ttyACM0 -b19200 -Uhfuse:w:0xDE:m'
-alias avrefe='avrdude -C/usr/share/arduino/hardware/tools/avrdude.conf -v -v -v -v -patmega328p -cstk500v1 -P/dev/ttyACM0 -b19200 -Uefuse:w:0xFD:m'
+alias avrefl='avrdude -C/usr/share/arduino/hardware/tools/avrdude.conf -v -v -v -v -F -patmega328p -cstk500v1 -P/dev/ttyACM0 -b19200 -Ulfuse:w:0xE2:m'
+alias avrefh='avrdude -C/usr/share/arduino/hardware/tools/avrdude.conf -v -v -v -v -F -patmega328p -cstk500v1 -P/dev/ttyACM0 -b19200 -Uhfuse:w:0xDE:m'
+alias avrefe='avrdude -C/usr/share/arduino/hardware/tools/avrdude.conf -v -v -v -v -F -patmega328p -cstk500v1 -P/dev/ttyACM0 -b19200 -Uefuse:w:0xFD:m'
 alias ledF='avrdude -C/usr/share/arduino/hardware/tools/avrdude.conf -v -v -v -v -patmega328p -cstk500v1 -P/dev/ttyACM0 -b19200 -Ulfuse:w:0xE2:m -Uhfuse:w:0xDE:m -Uefuse:w:0xFD:m'
+
+alias gpsf='avrdude -C/usr/share/arduino/hardware/tools/avrdude.conf -v -v -v -v -patmega328p -cstk500v1 -P/dev/ttyACM0 -b19200 -Ulfuse:w:0xE2:m -Uhfuse:w:0xD9:m -Uefuse:w:0xFF:m'
 
 alias rmn="rename 's/^\d+ //' *"
 alias state="scp -r root@192.168.0.17:/storage/roms/savestates ."
-alias net="nmap -sP 192.168.0.0/24 | grep report"
+alias net="nmap -sP 192.168.1.0/24 | grep report"
+
+alias pifreq="watch -n 1 cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq"
+alias pitemp="watch -n 1 -d /opt/vc/bin/vcgencmd measure_temp"
+alias bt="sudo rfcomm bind 0 00:18:E4:40:00:06 1"
+
 
 source ~/.git-completion1.7.1.bash
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
