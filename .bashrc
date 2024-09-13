@@ -293,7 +293,7 @@ alias avraf='avrdude -C/home/lee/common/avrdude.conf -v -v -v -v -patmega328p -c
 alias avrefl='avrdude -C/home/lee/common/avrdude.conf -v -v -v -v -F -patmega328p -cstk500v1 -P/dev/ttyACM0 -b19200 -Ulfuse:w:0xE2:m'
 alias avrefh='avrdude -C/home/lee/common/avrdude.conf -v -v -v -v -F -patmega328p -cstk500v1 -P/dev/ttyACM0 -b19200 -Uhfuse:w:0xDE:m'
 alias avrefe='avrdude -C/home/lee/common/avrdude.conf -v -v -v -v -F -patmega328p -cstk500v1 -P/dev/ttyACM0 -b19200 -Uefuse:w:0xFD:m'
-alias ledF='avrdude -C/home/lee/common/avrdude.conf -v -v -v -v -patmega328p -cstk500v1 -P/dev/ttyACM0 -b19200 -Ulfuse:w:0xE2:m -Uhfuse:w:0xDE:m -Uefuse:w:0xFD:m'
+alias ledF='avrdude -C/home/lee/common/avrdude.conf -v -v -v -v -patmega328p -cstk500v1 -P/dev/ttyACM0 -b19200 -Ulfuse:w:0xE2:m -Uhfuse:w:0xDE:m -Uefuse:w:0xF5:m'
 
 alias gpsf='avrdude -C/home/lee/common/avrdude.conf -v -v -v -v -patmega328p -cstk500v1 -P/dev/ttyACM0 -b19200 -Ulfuse:w:0xE2:m -Uhfuse:w:0xD9:m -Uefuse:w:0xFF:m'
 
